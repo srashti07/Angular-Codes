@@ -1,0 +1,43 @@
+h3{
+    text-align: center;
+    color: white;
+    margin: 0px 0px 0px 0px;
+}
+
+.img{
+    background-color: black;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.card{
+    margin-top: 100px;
+    margin-left: 150px;
+    display: inline-flex;
+    background-color: black;
+    color: white;
+}
+.card-content{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div > img , span{
+    
+    margin-right: 10px;
+}
+
+div > button{
+    
+    color: white;
+    margin: 5px 10px 5px 10px;
+    background-color: rgb(216, 56, 83);
+    width: 60px;
+    border-radius: 35px;
+}
+.box{
+    border: 1px solid rgb(216, 56, 83); 
+    width: fit-content;
+    margin-left: 20px;
+}

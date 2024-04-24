@@ -1,0 +1,7 @@
+<mat-form-field>
+  <input matInput placeholder="Note Title" [(ngModel)]="note.title" />
+</mat-form-field>
+<mat-form-field>
+  <textarea matInput placeholder="Note Content" [(ngModel)]="note.content"></textarea>
+</mat-form-field>
+<button mat-raised-button type="submit" (click)="addNote()">Submit</button>

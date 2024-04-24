@@ -1,0 +1,9 @@
+<div id="contact-input">
+    <h2>Add New Contact</h2>
+    <input type="text" placeholder="First Name" required [(ngModel)]="contact.firstName"><br/>
+    <input type="text" placeholder="Last Name" required [(ngModel)]="contact.lastName"><br/>
+    <input type="email" placeholder="Email" required [(ngModel)]="contact.email"><br/>
+    <input type="text" placeholder="Contact Number" required [(ngModel)]="contact.contactNo"><br/>
+    <br/>
+    <button (click)="addContact()">Add</button>
+  </div>

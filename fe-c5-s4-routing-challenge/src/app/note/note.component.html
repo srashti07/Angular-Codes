@@ -1,0 +1,44 @@
+<mat-card class="card">
+    <mat-card-header>
+        <!-- <div class="titlewithbuttons">            
+        <button class="smallbuttons" *ngIf="note?.priority==='Critical'" color="accent" mat-icon-button>
+            <mat-icon>gpp_maybe</mat-icon>
+        </button>
+        <button class="smallbuttons" *ngIf="note?.priority==='High'" color="accent" mat-icon-button>
+            <mat-icon>arrow_circle_up</mat-icon>
+        </button>
+        <button class="smallbuttons" *ngIf="note?.priority==='Medium'" color="primary" mat-icon-button>
+            <mat-icon>remove_circle_outline</mat-icon>
+        </button>
+        <button class="smallbuttons" *ngIf="note?.priority==='Low'" color="primary" mat-icon-button>
+            <mat-icon>arrow_circle_down</mat-icon>
+        </button> -->
+        <mat-card-title>{{note?.title}}</mat-card-title>
+        <!-- </div>                       -->
+    </mat-card-header>
+    <!-- <p class="reminderDate">{{note?.reminderDate}}</p> -->
+    <mat-card-content>
+        <p>{{note?.content}}</p>
+    </mat-card-content>
+    <!-- <button class="botbut" mat-raised-button disabled>{{note?.category}}</button>       -->
+    <mat-card-actions class="bottomIcons">
+        <div class="bottomIcon">
+            <button mat-icon-button color="primary" aria-label="icon-button with home icon">
+                <mat-icon>comment</mat-icon>
+            </button>
+            <button class="editpen" mat-icon-button color="primary" aria-label="icon-button with edit icon">
+                <a routerLink="/notes/{{note?.id}}">
+                    <mat-icon>edit</mat-icon>
+                </a>                
+            </button>
+            <button mat-icon-button color="warn" (click)="delete()" aria-label="icon-button with delete icon">
+                <a routerLink="/notes/{{note?.id}}">
+                    <mat-icon>delete</mat-icon>
+                </a>                 
+            </button>
+            <button mat-icon-button color="accent" aria-label="icon-button with notifications icon">
+                <mat-icon>notifications</mat-icon>
+            </button>
+        </div>
+    </mat-card-actions>  
+</mat-card>

@@ -1,0 +1,25 @@
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 90vw;
+  background-color: #c2185b;
+  height: 44px;
+}
+
+#title-block {
+  display:flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#search {
+  width: 400px;
+  font-size: 14px;
+}
+
+#home-link {
+  text-decoration: none;
+  color: whitesmoke;
+}

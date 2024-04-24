@@ -1,0 +1,10 @@
+<div>
+  <h4>Add New Note</h4>
+  <label for="title"></label>
+  <br>
+  <input type="text" [(ngModel)]="newNote.title" id="title" placeholder="Enter title" /><br>
+  <label for="content"> </label>
+  <textarea [(ngModel)]="newNote.content" id="content" placeholder="Enter content"></textarea>
+  <br>
+  <button (click)="addNote()">Save</button>
+</div>

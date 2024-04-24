@@ -1,0 +1,28 @@
+.top{
+    /* width: 100%; */
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+.note-list{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    position:fixed;
+    bottom: 5em;
+    right: 5em;
+}
+.hide{
+    display: none;
+}

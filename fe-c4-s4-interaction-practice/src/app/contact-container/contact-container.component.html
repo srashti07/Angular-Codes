@@ -1,0 +1,9 @@
+<div class="grid">
+    <div id="contact-container">
+    <div id="contact-cards">
+     <app-contact-card class="contact-card"
+    *ngFor="let contact of contacts" [contact]="contact">
+                </app-contact-card>         
+    </div>
+     </div><div class="css"><app-contact-add (contactAdded)="onContactAdded($event)"></app-contact-add></div></div>
+        

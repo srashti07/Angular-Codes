@@ -1,0 +1,13 @@
+.head-part{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+h1{
+    color: white;
+    padding-left: 10px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}

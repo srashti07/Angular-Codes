@@ -1,0 +1,14 @@
+.hello{
+    margin:auto;
+    border:2px solid black;
+    width:300px;
+    padding:10px;
+}
+input{
+ margin:10px;
+ border:none;
+ border-bottom:2px solid black ;
+}
+.button{
+    background-color: blue;
+}

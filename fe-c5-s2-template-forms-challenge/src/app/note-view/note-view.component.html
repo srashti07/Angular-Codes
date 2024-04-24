@@ -1,0 +1,23 @@
+<div class="top">
+    <div  [class.hide]="!toggleAdd">
+        <app-note-add  (hideNow)="hideNotes()" (noteAdded)="getNotes()"></app-note-add>
+    </div>
+    <div>
+        <app-search  (noteSearched)="searchNote($event)" ></app-search>
+    </div >
+</div>
+
+<div class="note-list">
+    <div *ngFor="let note of notes">
+        <app-note [note]="note" ></app-note>
+    </div>
+</div>
+
+<div>
+    <div class="example-button-container">
+        <button mat-fab color="primary" 
+        (click)="addNotesBtnClicked()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+</div>

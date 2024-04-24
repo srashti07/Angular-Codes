@@ -1,0 +1,59 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Sample Note",
+      "content": "This is a sample note added for testing purpose"
+    },
+    {
+      "id": 2,
+      "title": "Practice Exercise: TypeScript",
+      "content": "To add a function to calculate final bill amount"
+    },
+    {
+      "id": 3,
+      "title": "Challenge: TypeScript",
+      "content": "To add a function to fetch notes"
+    },
+    {
+      "id": 4,
+      "title": "Refactor Practice Exercise",
+      "content": "Code needs to be well-indented"
+    },
+    {
+      "id": 5,
+      "title": "Refactor Challenge",
+      "content": "Make the design responsive and add comments in the code"
+    },
+    {
+      "title": "hello",
+      "content": "one",
+      "id": 6
+    },
+    {
+      "title": "aaaa",
+      "content": "bbbbb",
+      "id": 7
+    },
+    {
+      "title": "aaaaa",
+      "content": "bbbbb",
+      "id": 8
+    },
+    {
+      "title": "aaaaa",
+      "content": "bbbbb",
+      "id": 9
+    },
+    {
+      "title": "1111111",
+      "content": "11111",
+      "id": 10
+    },
+    {
+      "title": "aaaaaa",
+      "content": "sssssss",
+      "id": 11
+    }
+  ]
+}

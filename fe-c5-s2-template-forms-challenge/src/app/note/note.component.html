@@ -1,0 +1,49 @@
+<mat-card  class="card" (mouseover)="isHidden = false" (mouseout)="isHidden = true">
+    <mat-card-header>
+        <mat-card-title>
+            <button *ngIf="note?.priority==='Critical'" color="accent" mat-icon-button>
+                <mat-icon>gpp_maybe</mat-icon>
+            </button>
+            <button *ngIf="note?.priority==='High'" color="warn" mat-icon-button>
+                <mat-icon>arrow_circle_up</mat-icon>
+            </button>
+            <button *ngIf="note?.priority==='Medium'"   mat-icon-button>
+                <mat-icon>remove_circle_outline</mat-icon>
+            </button>
+            <button *ngIf="note?.priority==='Low'" color="primary" mat-icon-button>
+                <mat-icon >arrow_circle_down</mat-icon>
+            </button>
+            {{note.title}}
+         </mat-card-title>
+         
+        <mat-card-subtitle>
+            {{reminderDisplay}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <p>{{ note.content }}</p>
+
+    </mat-card-content>
+    <p>
+        <mat-chip-list id="chips" >
+            <mat-chip class="chip" color="foreground"  selected readonly>{{note.category}}</mat-chip>
+        </mat-chip-list>     
+    </p>
+    
+    <mat-card-footer>
+        <mat-card-actions class="card-actions"  [class.hide]="isHidden" >
+                <button mat-icon-button >
+                    <mat-icon>comment</mat-icon>
+                </button>
+                <button mat-icon-button >
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button >
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-icon-button >
+                    <mat-icon>add_alarm</mat-icon>
+                </button>                
+        </mat-card-actions>
+    </mat-card-footer>
+</mat-card>

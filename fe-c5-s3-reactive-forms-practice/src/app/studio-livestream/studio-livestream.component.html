@@ -1,0 +1,124 @@
+<mat-toolbar color="primary">
+    <span>{{title}}</span>
+</mat-toolbar>
+<div class="form-container">
+    <form [formGroup]="liveStreamForm" class="main-form">
+        <mat-label>
+            <h2>
+                Fill  in the Event Details
+            </h2>
+        </mat-label>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>Event Title</mat-label>
+                <input matInput formControlName="eventTitle" type="text" placeholder="Add Title" name="eventTitle"/>
+                <mat-error class="error" *ngIf="eventTitle?.errors?.['required']">
+                    Event Title is required
+                </mat-error>
+                <mat-error class="error" *ngIf="eventTitle?.errors?.['maxlength']">
+                    Event title should not exceed 100 characters
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="date-time-ranges row">
+
+            <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput  formControlName="eventDate" [matDatepicker]="picker" name="eventDate" [min]="minDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+
+                <mat-error *ngIf="eventDate?.errors?.['required']">
+                    Event schedule date is required
+                </mat-error>
+
+            </mat-form-field>
+            
+            <div class="time-from-to">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>From</mat-label>
+                    <input type="text"
+                           placeholder="Pick one"
+                           aria-label="Number"
+                           matInput
+                           formControlName="fromTime"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of options" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+
+                    <mat-error *ngIf="fromTime?.errors?.['required']">
+                        Event schedule time is required
+                    </mat-error>
+    
+                    
+                  </mat-form-field>
+    
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>To</mat-label>
+                    <input type="text"
+                           placeholder="Pick one"
+                           aria-label="Number"
+                           matInput
+                           formControlName="toTime"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of options" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+
+                    <mat-error *ngIf="toTime?.errors?.['required']">
+                        Event schedule time is required
+                    </mat-error>
+
+
+                  </mat-form-field>
+    
+            </div>
+                    
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>Textarea</mat-label>
+                <textarea matInput></textarea>
+              </mat-form-field>
+
+        
+
+            <mat-form-field class="emails" appearance="fill">
+                <mat-label>emails</mat-label>
+                <textarea matInput formControlName="guests"></textarea>
+                <mat-chip-list>
+                    <mat-chip *ngFor="let guest of guestList" >
+                        {{guest}}
+                    </mat-chip>
+                </mat-chip-list>
+
+                <mat-error *ngIf="guests?.errors?.['required']">
+                    Guest email id is required
+                </mat-error>
+                <mat-error *ngIf="guests?.errors?.['invalidGuestEmails']">
+                    One of the guests in the list has an invalid email id
+                </mat-error>
+
+
+            </mat-form-field>
+
+        
+        
+        </div>
+
+        
+        <div>
+            <button  [disabled]="liveStreamForm.invalid" mat-raised-button type="submit" (click)="save()" color="primary">Save</button>        
+
+        </div>  
+        
+    </form>
+</div>
+

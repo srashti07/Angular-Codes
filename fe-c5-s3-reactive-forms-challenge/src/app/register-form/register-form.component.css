@@ -1,0 +1,44 @@
+.header{
+    color: blue;
+    margin-top: 2%;
+}
+
+.form{
+    margin-left: 2%;
+}
+
+.firstname{
+    margin-right: 5%;
+}
+
+.password{
+    margin-right: 5%;
+}
+
+.radio-button{
+    margin-top: 1%;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+    margin-bottom: 2%;
+}
+.age{
+    margin-right: 5%;
+}
+.address{
+    margin-top: 1%;
+}
+
+.city{
+    margin-right: 5%;
+}
+
+.example-button-row{
+    margin-left: 10%;
+
+}
+
+button{
+    margin-right: 2%;
+}

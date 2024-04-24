@@ -1,0 +1,14 @@
+.one{
+    border:2px solid black;
+    width:150px;
+    height:150px;
+    margin-left:60px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:10px 10px 10px lightblue;
+}
+.two{
+    display:inline-flex;
+    margin-left:50px ;
+    margin-top:20px ;
+}

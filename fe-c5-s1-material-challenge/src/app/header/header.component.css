@@ -1,0 +1,17 @@
+/* .header-container{
+    width: 100%;
+    padding: 1em;
+    background-color: blue;
+    color: white;
+}
+.header-container h1{
+    margin: 0;
+} */
+
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }

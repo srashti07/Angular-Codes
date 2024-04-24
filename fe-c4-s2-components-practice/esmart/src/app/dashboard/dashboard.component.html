@@ -1,0 +1,21 @@
+<div>
+    <h3>{{dashboardText}}</h3>
+</div>
+
+<div class="box">
+    <input [(ngModel)] = "searchText" style="background-color: white; color: black;   margin-left: 20px;">
+    <button (click) = "search()" type = button>Go</button> 
+<button (click) = "reset()" type = button>Reset</button></div>
+    <div class="col">
+<div class="card" *ngFor="let movie of movies" >
+    <img class="img" src="../../assets/{{movie.movieTitle}}.jpg" alt={{movie.movieTitle}}>
+    <div class="card-content">
+       <img src="../../assets/rating.jpg" alt={{movie.rating}} /><span>{{movie.rating}}</span><br> 
+       <span>{{movie.movieTitle | titlecase }}</span>
+       <span>{{movie.genre }}</span>
+       <span>{{movie.yearOfRelease }}</span>
+       <!-- Write for other movie properties -->
+     </div>
+ </div>
+ </div>
+

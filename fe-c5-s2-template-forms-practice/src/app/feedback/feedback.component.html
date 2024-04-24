@@ -1,0 +1,88 @@
+
+    <mat-toolbar color="primary">Fine Dine Restaurant FeedBack Form</mat-toolbar>
+   
+   
+    <form  (ngSubmit)="onSubmit()" #feedbackForm="ngForm"  >  
+     
+    
+      <div class="example-container">
+        <h2 style="color: fuchsia;">We appreciate your feedback!</h2>
+        <mat-form-field>
+          <input matInput placeholder="First Name" #firstName="ngModel" type="text" name="firstName" [(ngModel)]="feedback.firstName" required minlength="2">
+          <mat-error *ngIf="firstName.errors?.['required']">
+            First name is required
+          </mat-error>
+          <mat-error *ngIf="firstName.errors?.['minlength']">
+            first name minimum length is {{firstName.errors?.['minlength']?.requiredLength}}
+          </mat-error>
+        </mat-form-field>
+        
+        
+    
+        <mat-form-field>
+            <input matInput placeholder="Last Name" type="text" #lastName="ngModel" name="lastname" [(ngModel)]="feedback.lastName" >
+           
+        </mat-form-field>
+    
+    
+          <mat-form-field>
+            <input matInput placeholder="Phone Number" type="text" #phone="ngModel" name="phone" [(ngModel)]="feedback.phone" required pattern="[987][0-9]{9}">
+            <mat-error *ngIf="phone.errors?.['required']">
+              phone number is required
+            </mat-error>
+          
+            <mat-error *ngIf="phone.errors?.['pattern']">
+              enter valid phone number containing 10 digits starting with 7/8/9
+            </mat-error>
+          </mat-form-field>
+          
+    
+    
+          
+          <mat-form-field>
+            <input matInput placeholder="Email id" #email="ngModel" type="email" name="email" [(ngModel)]="feedback.email" required email>
+            <mat-error *ngIf="email.errors?.['required']">
+              email id is required
+            </mat-error>
+            <mat-error *ngIf="email.errors?.['email']">
+              enter valid email id
+            </mat-error>
+        </mat-form-field>
+        
+      
+    
+          <mat-form-field>
+            <mat-select placeholder="Location You Visited" id="location" name="location" [(ngModel)]="feedback.location">
+                <mat-option *ngFor="let loc of location" [value]="loc">{{loc}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    
+    
+       
+          <mat-radio-group aria-label="Select an option" name="rating" #rating="ngModel"
+          [(ngModel)]="feedback.rating">
+          <label class="label">Overall Dinning Experience</label>
+          <mat-radio-button  value="5">Excellent</mat-radio-button>
+          <mat-radio-button class='radio-button'value="5">Good</mat-radio-button>
+          <mat-radio-button  class='radio-button' value="5">Average</mat-radio-button>
+          <mat-radio-button class='radio-button'value="5">Dissatisfied</mat-radio-button>
+          </mat-radio-group>
+    
+     
+    
+        <mat-form-field>
+          <textarea matInput  placeholder="Any Comments/ Suggestions" rows="5" type="text" name="comments" id="comments" #comments="ngModel" [(ngModel)]="feedback.comments"></textarea>
+        </mat-form-field>
+      
+        <div class="buttons">
+           
+            <button  Mat-Button type="submit" color="primary" class="button-submit" [disabled]="feedbackForm.invalid"  mat-raised-button >Submit</button>
+        <button Mat-Button color="accent" mat-raised-button type="reset" class="button-reset"  >Reset</button>
+        
+        
+           </div>
+      </div>
+     
+        </form>
+   
+  

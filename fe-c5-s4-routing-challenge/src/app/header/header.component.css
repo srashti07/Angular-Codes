@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.navContainer{
+    display: flex;  
+    align-items: center;
+}  
+
+.iconspacer{
+    margin-left: 1600px;    
+}

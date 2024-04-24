@@ -1,0 +1,37 @@
+.main-form{
+    display: flex;
+    flex-direction: column;
+    gap: em;
+}
+.form-container{
+    padding: 5em;
+}
+.date-time-ranges{
+    display: flex;
+}
+.mat-form-field{
+    width: 100%;
+}
+.row{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.emails ng-invalid{
+    background-color: red;
+
+}
+.time-from-to{
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-around;
+
+}
+form{
+    display: flex;
+    gap: 2em;
+}

@@ -1,0 +1,10 @@
+.search{
+    background: navy;
+    float: right;
+    margin-right: 10px;
+   margin-top: -50px;
+  }
+  button{
+    background-color: navy;
+    color: white;
+  }

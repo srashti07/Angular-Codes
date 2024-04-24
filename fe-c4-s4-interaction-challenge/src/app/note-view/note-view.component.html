@@ -1,0 +1,8 @@
+<div>
+    <app-search (searchEvent)="handleSearch($event)"></app-search>
+    <app-note-add></app-note-add>
+    <div *ngFor="let note of filteredNotes" id="contact-cards">
+      <app-note [Note]="note" class="cards"></app-note>
+    </div>
+   
+  </div>

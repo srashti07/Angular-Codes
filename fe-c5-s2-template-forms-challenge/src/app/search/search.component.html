@@ -1,0 +1,9 @@
+<div id="search"  [class.hide]="isHidden">
+    <mat-form-field appearance="fill">
+        <mat-label>Search Note</mat-label>
+        <input  matInput type="text" name="searchquery" id="searchquery" class="search-bar">
+    </mat-form-field>
+    <button mat-icon-button (click)="startSearch()">
+        <mat-icon>search</mat-icon>
+    </button>
+</div>
